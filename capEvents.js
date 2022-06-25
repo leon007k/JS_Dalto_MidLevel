@@ -31,16 +31,77 @@ let text = document.querySelector(".container__item--h2");
  * # keypress - ocurre cuando una tecla se presiona
  * # onkeyup - ocurre despues de que los dos eventos anteriores hayan concluido consecutivamente
  */
-let input = document.querySelector(".container__item--input");
+// let input = document.querySelector(".container__item--input");
 
-input.addEventListener("keydown",(e) => {
-  console.log("Una tecla fue presionada");
+// input.addEventListener("keydown",(e) => {
+//   console.log("Una tecla fue presionada");
+// });
+
+// input.addEventListener("keypress",(e) => {
+//   console.log("Un usuario presiono una tecla");
+// })
+
+// input.addEventListener("keyup",(e) => {
+//   console.log("Una tecla fue soltada");
+// })
+
+/**
+ * * Eventos de la interfaz
+ * # error - ocurre cuando se presenta un error durante la carga de un archivo multimedia
+ * # load - ocurre cuando un objeto se ha cargado
+ * # beforeunload - ocurre antes de que el documento este a punto de descargarse
+ * # unload - ocurre una vez que se ha descargado una pagina
+ * # resize - ocurre cuando se cambia el tamaño de la vista del documento
+ * # scroll - ocurre cuando se desplaza la barra de desplazamiento de un elemento
+ * # select - ocurre despues de que el usuario selecciona algun texto de input o textarea
+ */
+/* 
+let img = document.querySelector(".container__item--img");
+img.addEventListener("error",() => {
+  console.log("ha sucedido un error al cargar la imagen");
 });
 
-input.addEventListener("keypress",(e) => {
-  console.log("Un usuario presiono una tecla");
-})
+addEventListener("load",() => {
+  console.log("La pagina ha cargado exitosamente");
+});
+
+addEventListener("beforeunload",() => {
+  console.log("estas apunto de salirte del sitio");
+}); */
+
+/* addEventListener("unload",() => {
+  console.log("estas apunto de salirte del sitio");
+}); */
+
+/* addEventListener("scroll",() => {
+  console.log("se ha scrolleado");
+}); */
+/* let input = document.querySelector(".container__item--input");
+let span = document.querySelector(".container__item--p-prueba");
+input.addEventListener("select",(e) => {
+  let start = e.target.selectionStart;
+  let end = e.target.selectionEnd;
+  let textcomplete = input.value;
+  span.textContent = "lo que se subdrayo es: " + textcomplete.substring(start, end);
+});
 
 input.addEventListener("keyup",(e) => {
-  console.log("Una tecla fue soltada");
-})
+  let key = e.key;
+  span.innerHTML = `la ultima tecla apretada fue: <b>${key}</b>`;
+}); */
+
+/**
+ * * Eventos de tiempo
+ * # setTimeout() - establece un temporizador que ejecuta una funcion  o una porcion de codigo despues de que trasncurre el tiempo establecido
+ * # clearTimeout() - borra el tiempo establecido a un setTimeout
+ * # setInterval() - ejecuta una funcion o fragmento de codigo repetitivamente cada vez que termina el periodo de tiempo determinado
+ * # clearInterval() - borra el intervalo creado
+ */
+/* const temp = setTimeout(() => {
+  document.write("hola que hace");
+},2000);
+
+clearTimeout(temp); */
+const temp = setInterval(() => {
+  document.write("hola");
+},2000);

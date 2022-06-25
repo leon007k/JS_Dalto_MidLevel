@@ -1,0 +1,53 @@
+body
+  color: #333
+  background-color: #111
+  font-family: sans-serif
+
+input
+  display: block
+  width: 100%
+  margin: 18px 0
+  padding: 6px
+  box-sizing: border-box
+  color: #fff
+  border:
+    top: 2px solid #48e
+    bottom: none
+    left: none
+    right: none
+  background-color: transparent
+  outline: none !important
+  transition: background 0.3s
+  &[type="submit"]
+    border: none 
+    width: 50%
+    margin-top: 18px
+    padding: 12px
+    background-color: #26a
+    color: #fff
+  &[type="submit"]:hover
+    background-color: #048
+  &::placeholder
+    color: #79f
+    transition: color 0.3s
+  &:hover
+    background-color: #26a
+  &:hover::placeholder
+    color: #fff
+
+form
+  border-radius: 10px
+  width: 86%
+  margin: auto
+  background-color: #013
+  padding: 30px
+
+h2
+  color: #fff
+  margin-bottom: 25px
+
+.success
+  color: #6ed179
+
+.error
+  color: #ff9e9e

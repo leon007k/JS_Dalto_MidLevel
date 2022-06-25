@@ -41,3 +41,59 @@
 //                 URL completa: <b>${href}</b> <br>
 //                 Hostname: <b>${hostname}</b`;
 // document.write(content);
+
+/**
+ * @ cofla reprobro 2 materias y ahora tiene que enviar un formulario para registrarse en la materia que debe
+ * * el formulario debe contener un nombre completo, email y materia adeudada
+ * * se debe validar el email, que los nombres sean reales
+ * * se debe enviar al servidor de manera pulida
+ */
+const name = document.getElementById("fullName");
+const email = document.getElementById("email");
+const mClass = document.getElementById("class");
+const submit = document.getElementById("submit");
+const results = document.querySelector(".results");
+
+submit.addEventListener("click", (e) =>{
+  e.preventDefault();
+  let error = validateValues();
+  if (error[0]){
+    results.innerHTML = "<p>" + error[1] + "</p>";
+    results.classList.add("error");
+    result.classList.remove("success");
+  }else{
+    results.innerHTML = "<p>Solicitud enviada correctamente</p>";
+    results.classList.add("success");
+    result.classList.remove("error");
+  }
+});
+
+const validateValues = () => {
+  let error = [];
+  switch (true){
+    case (name.value.length < 5):
+      error[0] = true;
+      error[1] = "El nombre no puede contener menos de 5 caracteres";
+      return error;
+    break;
+    case (name.value.length > 40):
+      error[0] = true;
+      error[1] = "El nombre no puede contener mas de 40 caracteres";
+      return error;
+    break;
+    case (email.value.length < 5 || email.value.length > 40 || email.value.indexOf("@") == -1 || email.value.indexOf(".") == -1):
+      error[0] = true;
+      error[1] = "El email es invalido";
+      return error;
+    break;
+    case (mClass.value.length < 4 || mClass.value.length > 40):
+      error[0] = true;
+      error[1] = "La materia no existe";
+      return error;
+    break;
+    default:
+      error[0] = false;
+      return error;
+    break;
+  }
+};
