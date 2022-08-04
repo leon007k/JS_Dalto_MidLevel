@@ -1,0 +1,36 @@
+body {
+  color: #333;
+  font-family: sans-serif;
+}
+
+.materias__list {
+  width: 90%;
+  background-color: #ccc;
+  padding: 20px;
+}
+
+.materias__list-content {
+  background-color: #efefef;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.materias__list-content div {
+  padding: 20px;
+}
+
+.materias__list-calificacion {
+  -ms-flex-preferred-size: 20px;
+      flex-basis: 20px;
+  background-color: #ddd;
+  font-weight: 700;
+}
+
+.materias__list-nombre {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+/*# sourceMappingURL=styleP6.css.map */

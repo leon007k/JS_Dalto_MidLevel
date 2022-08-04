@@ -1,0 +1,101 @@
+/*
+  body
+  color: #333
+  background-color: #111
+  font-family: sans-serif */
+input {
+  display: block;
+  width: 100%;
+  margin: 18px 0;
+  padding: 6px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  border-top: 2px solid #48e;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  outline: none !important;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+input[type="submit"] {
+  border: none;
+  width: 50%;
+  margin-top: 18px;
+  padding: 12px;
+  background-color: #26a;
+  color: #fff;
+}
+
+input[type="submit"]:hover {
+  background-color: #048;
+}
+
+input::-webkit-input-placeholder {
+  color: #79f;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+input:-ms-input-placeholder {
+  color: #79f;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+input::-ms-input-placeholder {
+  color: #79f;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+input::placeholder {
+  color: #79f;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+input:hover {
+  background-color: #26a;
+}
+
+input:hover::-webkit-input-placeholder {
+  color: #fff;
+}
+
+input:hover:-ms-input-placeholder {
+  color: #fff;
+}
+
+input:hover::-ms-input-placeholder {
+  color: #fff;
+}
+
+input:hover::placeholder {
+  color: #fff;
+}
+
+form {
+  border-radius: 10px;
+  width: 86%;
+  margin: auto;
+  background-color: #013;
+  padding: 30px;
+}
+
+h2 {
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.success {
+  color: #6ed179;
+}
+
+.error {
+  color: #ff9e9e;
+}
+/*# sourceMappingURL=style.css.map */
