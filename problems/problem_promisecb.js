@@ -26,11 +26,15 @@ const materias = [
   {
     nombre: 'Lenguajes de programacion 1',
     nota: 7
+  },
+  {
+    nombre: 'Desarrollo de software',
+    nota: 8
   }
 ];
 
-const getMateria = async (id) => {
-  let solicitud = new Promise((resolve, reject) => {
+const getMateria = (id) => {
+  return new Promise((resolve, reject) => {
     let materia = materias[id];
     if (materia === undefined) {
       reject("No se encontro la materia");
@@ -40,11 +44,20 @@ const getMateria = async (id) => {
       }, Math.random() * 400);
     }
   });
-
-
-  let res = await solicitud;
-
-  console.log(res);
 };
 
-getMateria(1).catch(alert);
+const showMaterias = async () => {
+  let materia = [];
+  for (let i = 0; i < materias.length; i++) {
+    materia[i] = await getMateria(i);
+    let addHtmlMaterias = `
+      <div class="materias__list-content">
+        <div class="materias__list-nombre">${materia[i].nombre}</div>
+        <div class="materias__list-calificacion">${materia[i].nota}</div>
+      </div>
+    `;
+    tableMaterias.innerHTML += addHtmlMaterias;
+  }
+}
+
+showMaterias().catch(alert);
